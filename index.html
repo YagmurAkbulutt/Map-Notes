@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--LEAFLET CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!--BS ICON-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <aside>
+      <div class="sidebar">
+        <h1>Notes</h1>
+        <form>
+          <div class="field">
+            <label for="nots">Add Note</label>
+            <input type="text" id="nots"/>
+          </div>
+          <div class="field">
+            <label for="date">Add Date</label>
+            <input type="date" id="date"/>
+          </div>
+          <div class="field">
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="park">Car Park</option>
+              <option value="home">Home</option>
+              <option value="job">Job</option>
+              <option value="goto">To be Visited</option>
+            </select>
+          </div>
+          <button>Add</button>
+        </form>
+
+        <ul>
+          <!--
+            <li>
+            <div>
+              <p>description</p>
+              <p><span>Date:</span> 2024-03-23</p>
+              <p><span>Status:</span> Car Park</p>
+              <i class="bi bi-x" id="delete"></i>
+              <i class="bi bi-airplane-fill" id="fly"></i>
+            </div>
+          </li>
+          -->
+        </ul>
+
+      </div>
+    </aside>
+
+    <div id="map"></div>
+    
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
